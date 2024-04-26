@@ -1,10 +1,11 @@
 import json
 import requests as re
+import keyboard
 
 API_KEY = 'AIzaSyAWFiq9tAnMTQvlVtMeO1D14SrZXQigPWs'
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={API_KEY}"
 MESSAGE_FORMAT = """
-Command: {command}. Requirements: The code should be in Python. The code should import the necessary libraries. The code should be runnable.
+Command: {command}. Requirements: The code should be in Python. The code should import the necessary libraries. The code should be runnable. If there's a while True loop inside the code, the loop should be when keyboard.is_pressed('Q').
 """
 
 def get_response_text(data):
