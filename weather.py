@@ -11,6 +11,7 @@ while True:
     r = requests.get(ApiUrl)
     forecast = r.json()
     popValue = forecast['current']['temp_c']
+    print(f'Temperature: {popValue}')
     print(r.json())
     # popValue = int(popValue)
     if popValue >= 30:
