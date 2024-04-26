@@ -4,7 +4,7 @@ import requests as re
 API_KEY = 'AIzaSyAWFiq9tAnMTQvlVtMeO1D14SrZXQigPWs'
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={API_KEY}"
 MESSAGE_FORMAT = """
-Command: {command}. Requirements: The code should be in Python. The code should import the necessary libraries. The code should be runnable. The code should all be inside def run() method.
+Command: {command}. Requirements: The code should be in Python. The code should import the necessary libraries. The code should be runnable.
 """
 
 def get_response_text(data):
