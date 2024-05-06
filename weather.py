@@ -2,9 +2,6 @@ import requests
 import RPi.GPIO as GPIO
 import time
 
-INTERVAL = 1
-THRESHOLD = 25
-
 GPIO. setmode(GPIO.BCM)
 GPIO.setup(25, GPIO.OUT)
 
@@ -18,8 +15,8 @@ while True:
     print(f'Temperature: {popValue}')
     # print(r.json())
     # popValue = int(popValue)
-    if popValue >= THRESHOLD:
+    if popValue >= 30:
         GPIO.output(25, GPIO.HIGH)
     else:
         GPIO.output(25, GPIO.LOW)
-    time. sleep(INTERVAL)
+    time. sleep(180)
