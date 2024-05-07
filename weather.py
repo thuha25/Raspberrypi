@@ -15,7 +15,7 @@ while True:
     print(f'Temperature: {popValue}')
     # print(r.json())
     # popValue = int(popValue)
-    if popValue >= 30:
+    if popValue >= 25:
         GPIO.output(25, GPIO.HIGH)
     else:
         GPIO.output(25, GPIO.LOW)
