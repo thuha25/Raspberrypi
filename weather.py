@@ -5,7 +5,7 @@ import time
 GPIO. setmode(GPIO.BCM)
 GPIO.setup(25, GPIO.OUT)
 
-key = '5af21e4aab63472a8ff41909242604'
+key = 'b76982d2c00b478192520802240705'
 location = 'Da Nang'
 ApiUrl = f"http://api.weatherapi.com/v1/current.json?key={key}&q={location}"
 while True:
